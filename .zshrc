@@ -27,5 +27,6 @@ export PATH=$GOPATH/bin:$PATH
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 source ~/.dotfiles/.custom-env.sh
+source ~/.dotfiles/contrib/completion/bash/docker-machine-wrapper.bash
 
 eval "$(hub alias -s)"
