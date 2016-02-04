@@ -26,4 +26,6 @@ export PATH=$GOPATH/bin:$PATH
 # Customize to your needs...
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 
+source ~/.dotfiles/.custom-env.sh
+
 eval "$(hub alias -s)"
