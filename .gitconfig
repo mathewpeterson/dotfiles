@@ -8,19 +8,24 @@
 	log-branch = log origin/master..
 	undo-commit = reset --soft HEAD^
 	branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
-        # creates a diff of current branch against supplied branch, usage: git export-branch [refbranch]
-        export-branch = !git format-patch --stdout $1 > ~/`git branch-name`.diff
-        co = checkout
-        ci = commit
-        st = status
-        br = branch
+    # creates a diff of current branch against supplied branch, usage: git export-branch [refbranch]
+    export-branch = !git format-patch --stdout $1 > ~/`git branch-name`.diff
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
 [core]
 	editor = vim
-        excludesfile = ~/.gitignore
-
+    excludesfile = ~/.gitignore
 [color]
 	ui = auto
-
 [push]
 	# Push current branch even if you've never pushed it before
 	default = current
+[user]
+	email = mathewpeterson@me.com
+	name = Mathew Peterson
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
