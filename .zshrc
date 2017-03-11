@@ -33,3 +33,5 @@ source ~/.dotfiles/.custom-env.sh
 source ~/.dotfiles/contrib/completion/bash/docker-machine-wrapper.bash
 
 eval "$(hub alias -s)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
