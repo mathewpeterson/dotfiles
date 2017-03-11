@@ -19,9 +19,12 @@ plugins+=(autoenv) # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugi
 plugins+=(compleat) # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/compleat/compleat.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
+# Golang
 export PATH=/usr/local/sbin:$PATH
 export GOPATH=~/.go
 export PATH=$GOPATH/bin:$PATH
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Customize to your needs...
 fpath=(/usr/local/share/zsh/site-functions $fpath)
